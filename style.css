@@ -25,7 +25,7 @@ body {
   font-family: "Barlow Semi Condensed", sans-serif;
   background-color: var(--Grey-100);
   padding: 4rem 1.5rem;
-  min-height: 100vh;
+  min-height: 80vh;
 }
 
 .grid {
@@ -37,21 +37,31 @@ body {
 }
 
 .content {
+  position: relative;
   color: var(--White);
   border-radius: 8px;
   padding: 1.5rem;
   font-size: 1rem;
 }
 
-.content img {
+.content img:first-child {
   border-radius: 50%;
   width: 2rem;
   border: 1px solid var(--White);
 }
 
+.content img:nth-of-type(2) {
+  position: absolute;
+  top: 0;
+  right: 5rem;
+  z-index: 1;
+}
+
 .content h1 {
+  position: relative;
   font-size: 1.2rem;
   padding: 1rem 0;
+  z-index: 2;
 }
 
 .content p {
@@ -75,7 +85,7 @@ body {
   align-items: center;
 }
 
-.heading-text {
+.heading .heading-text {
   display: flex;
   flex-direction: column;
   margin-left: 1rem;
@@ -136,7 +146,7 @@ body {
   .grid {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, auto);
-    width: 90%;
+    width: 75%;
   }
 
   .a {
