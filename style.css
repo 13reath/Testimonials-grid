@@ -24,6 +24,9 @@ body {
   height: 100vh;
   font-size: 13px;
   place-items: center;
+  font-weight: 500;
+  font-family: "Barlow Semi Condensed";
+  background-color: var(--Grey-100);
 }
 
 .grid {
@@ -31,36 +34,84 @@ body {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 1.5rem;
-  width: 80vw;
+  width: 70vw;
   height: 60vh;
 }
 
-.box {
+.content {
   background-color: #444;
   color: #fff;
-  border-radius: 5px;
-  padding: 1rem;
+  border-radius: 8px;
+  padding: 2rem;
   font-size: 1rem;
 }
 
+.content img {
+  border-radius: 50%;
+  display: flex;
+  width: 2rem;
+  border: 1px solid var(--White);
+}
+
+.content h1 {
+  font-size: 1.4rem;
+  padding: 1rem 0 1rem 0;
+}
+
+.content p {
+  color: var(--Grey-100);
+}
+
+.c,
+.c p,
+.e,
+.e p {
+  color: var(--Grey-400);
+}
+
+.d {
+  color: var(--Grey-200);
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+}
+
+.heading-text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+  text-transform: capitalize;
+}
+
+.heading-text p:last-child {
+  font-size: 0.85rem;
+}
+
 .a {
+  background-color: var(--Purple-500);
   grid-column: 1 / 3;
   grid-row: 1;
 }
 .b {
+  background-color: var(--Grey-500);
   grid-column: 3;
   grid-row: 1;
 }
 .c {
+  background-color: var(--White);
   grid-column: 1;
   grid-row: 2;
 }
 .d {
+  background-color: var(--Dark-blue);
   grid-column: 2 / 4;
   grid-row: 2;
 }
 
 .e {
+  background-color: var(--White);
   grid-column: 4;
   grid-row: 1/3;
 }
